@@ -1,0 +1,19 @@
+WRN 2026-04-29T20:01:55.740 ?.18203    server_start:197: Failed to start server: operation not permitted: /var/folders/sy/96vrk4px7t7_1jgqsljdtjch0000gn/T/nvim.jsmith/7HRRqK/nvim.18203.0
+WRN 2026-04-29T20:02:28.945 ?.18271    server_start:197: Failed to start server: operation not permitted: /var/folders/sy/96vrk4px7t7_1jgqsljdtjch0000gn/T/nvim.jsmith/azrznQ/nvim.18271.0
+WRN 2026-04-29T20:07:12.466 ?.20811    server_start:197: Failed to start server: operation not permitted: /var/folders/sy/96vrk4px7t7_1jgqsljdtjch0000gn/T/nvim.jsmith/7odLFF/nvim.20811.0
+WRN 2026-04-29T20:07:15.597 ?.20812    server_start:197: Failed to start server: operation not permitted: /var/folders/sy/96vrk4px7t7_1jgqsljdtjch0000gn/T/nvim.jsmith/i0897g/nvim.20812.0
+WRN 2026-04-29T20:07:19.977 ?.20813    server_start:197: Failed to start server: operation not permitted: /var/folders/sy/96vrk4px7t7_1jgqsljdtjch0000gn/T/nvim.jsmith/U1rbvB/nvim.20813.0
+WRN 2026-04-29T20:07:23.325 ?.20820    server_start:197: Failed to start server: operation not permitted: /var/folders/sy/96vrk4px7t7_1jgqsljdtjch0000gn/T/nvim.jsmith/Jq1Lbs/nvim.20820.0
+WRN 2026-04-29T20:09:57.232 ?.21210    server_start:197: Failed to start server: operation not permitted: /var/folders/sy/96vrk4px7t7_1jgqsljdtjch0000gn/T/nvim.jsmith/NF1yvy/nvim.21210.0
+WRN 2026-04-29T20:10:09.746 ?.21344    server_start:197: Failed to start server: operation not permitted: /var/folders/sy/96vrk4px7t7_1jgqsljdtjch0000gn/T/nvim.jsmith/0u1IGb/nvim.21344.0
+WRN 2026-04-29T20:10:18.843 ?.21485    server_start:197: Failed to start server: operation not permitted: /var/folders/sy/96vrk4px7t7_1jgqsljdtjch0000gn/T/nvim.jsmith/Hkm449/nvim.21485.0
+WRN 2026-04-29T20:10:30.003 ui.21484   tui_stop:658: TUI: timed out waiting for DA1 response
+WRN 2026-04-29T20:40:50.576 ?.26079    server_start:197: Failed to start server: operation not permitted: /var/folders/sy/96vrk4px7t7_1jgqsljdtjch0000gn/T/nvim.jsmith/sJYGCA/nvim.26079.0
+WRN 2026-04-29T20:40:54.570 ?.26085    server_start:197: Failed to start server: operation not permitted: /var/folders/sy/96vrk4px7t7_1jgqsljdtjch0000gn/T/nvim.jsmith/g1alRJ/nvim.26085.0
+WRN 2026-04-29T20:41:57.424 ?.26305    server_start:197: Failed to start server: operation not permitted: /var/folders/sy/96vrk4px7t7_1jgqsljdtjch0000gn/T/nvim.jsmith/sa3Az7/nvim.26305.0
+WRN 2026-04-29T20:42:48.454 ?.26424    server_start:197: Failed to start server: operation not permitted: /var/folders/sy/96vrk4px7t7_1jgqsljdtjch0000gn/T/nvim.jsmith/bcQLVS/nvim.26424.0
+WRN 2026-04-29T20:42:53.061 ?.26425    server_start:197: Failed to start server: operation not permitted: /var/folders/sy/96vrk4px7t7_1jgqsljdtjch0000gn/T/nvim.jsmith/6d3hhg/nvim.26425.0
+WRN 2026-04-29T20:43:08.564 ?.26475    server_start:197: Failed to start server: operation not permitted: /var/folders/sy/96vrk4px7t7_1jgqsljdtjch0000gn/T/nvim.jsmith/xTkCeC/nvim.26475.0
+WRN 2026-04-29T20:44:11.310 ?.26681    server_start:197: Failed to start server: operation not permitted: /var/folders/sy/96vrk4px7t7_1jgqsljdtjch0000gn/T/nvim.jsmith/rTEhGY/nvim.26681.0
+WRN 2026-04-29T20:50:58.749 ?.26899    server_start:197: Failed to start server: operation not permitted: /var/folders/sy/96vrk4px7t7_1jgqsljdtjch0000gn/T/nvim.jsmith/k4AXVU/nvim.26899.0
+WRN 2026-04-29T20:54:36.713 ?.27203    server_start:197: Failed to start server: operation not permitted: /var/folders/sy/96vrk4px7t7_1jgqsljdtjch0000gn/T/nvim.jsmith/8H62rf/nvim.27203.0
