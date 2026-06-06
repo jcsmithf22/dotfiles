@@ -151,12 +151,10 @@ later(function()
   require('conform').setup {
     default_format_opts = {
       -- Allow formatting from LSP server if no dedicated formatter is available
-      default_format_opts = {
-        timeout_ms = 3000,
-        async = false, -- not recommended to change
-        quiet = false, -- not recommended to change
-        lsp_format = 'fallback',
-      },
+      timeout_ms = 3000,
+      async = false, -- not recommended to change
+      quiet = false, -- not recommended to change
+      lsp_format = 'fallback',
     },
     -- Map of filetype to formatters
     -- Make sure that necessary CLI tool is available
@@ -175,6 +173,7 @@ later(function()
       },
       tsx = { 'oxfmt' },
       typescript = { 'oxfmt' },
+      typescriptreact = { 'oxfmt' },
     },
   }
 end)
