@@ -236,6 +236,8 @@ do
   vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
   vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
+  vim.keymap.set('n', '<leader>bd', '<cmd>bdelete<CR>', { desc = 'Delete buffer' })
+
   local edit_config_file = function(filename) return string.format('<Cmd>edit %s/%s<CR>', vim.fn.stdpath 'config', filename) end
   vim.keymap.set('n', '<leader>ei', edit_config_file 'init.lua', { desc = 'Neovim init.lua' })
 
@@ -390,6 +392,7 @@ do
       { '<leader>e', group = 'Explore', mode = { 'n', 'v' } },
       { '<leader>s', group = 'Search', mode = { 'n', 'v' } },
       { '<leader>t', group = 'Toggle' },
+      { '<leader>b', group = 'Buffer' },
       { '<leader>h', group = 'Git hunk', mode = { 'n', 'v' } }, -- Enable gitsigns recommended keymaps first
       { '<leader>9', group = '99', mode = { 'n', 'v' } },
       { '<leader>9w', group = 'Work', mode = { 'n', 'v' } },
@@ -870,7 +873,7 @@ do
       -- javascript = { "prettierd", "prettier", stop_after_first = true },
       go = {
         'gofumpt',
-        'goimports'
+        'goimports',
       },
       python = {
         'ruff_fix',
