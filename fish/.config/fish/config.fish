@@ -1,35 +1,33 @@
 if status is-interactive
-# Commands to run in interactive sessions can go here
+    # Commands to run in interactive sessions can go here
 end
 
-alias ssh="ssh.exe"
-alias ssh-add="ssh-add.exe"
+eval "$(/opt/homebrew/bin/brew shellenv)"
+eval "$(fnox activate fish)"
+
+zoxide init fish | source
 alias cd="z"
+alias ls="eza"
+alias ll="eza -l"
 alias lg="lazygit"
 
 set -x hydro_color_pwd green
 set -x hydro_color_git magenta
-set -x MISE_CEILING_PATHS /mnt/c/Users/Jsmith
-set -x UV_PROJECT_ENVIRONMENT ./.venv-ubuntu
-set -x EDITOR nvim
 
-mise activate fish | source
-zoxide init fish | source
+set -x CLOUDFLARE_API_TOKEN dxvY7PxmHuOI4OQItzrJzLIdrUiTXjZoS0jsqfQX
+set -x CLOUDFLARE_DEFAULT_ACCOUNT_ID a0b2310ce2c2d7321e80b5268a9e08b5
 
+set ANDROID_HOME '~/Library/Android/sdk'
+
+# Set up fzf key bindings
 fzf --fish | source
 
-# opencode
-fish_add_path /home/jsmith/.opencode/bin
-
-# Amp CLI
-fish_add_path "$HOME/.local/bin"
-
-# Windows interop tools for WSL clipboard integration
-fish_add_path /mnt/c/Windows/System32
-fish_add_path /mnt/c/Windows/System32/WindowsPowerShell/v1.0
+# Added by OrbStack: command-line tools and integration
+# This won't be added again if you remove it.
+source ~/.orbstack/shell/init2.fish 2>/dev/null || :
 
 # pnpm
-set -gx PNPM_HOME "/home/jsmith/.local/share/pnpm"
+set -gx PNPM_HOME "/Users/jsmith/Library/pnpm"
 if not string match -q -- "$PNPM_HOME/bin" $PATH
   set -gx PATH "$PNPM_HOME/bin" $PATH
 end

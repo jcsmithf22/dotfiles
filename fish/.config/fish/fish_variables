@@ -1,17 +1,29 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR --export BUN_INSTALL:/Users/jsmith/\x2ebun
+SETUVAR --export --path GOPATH:/Users/jsmith/go
 SETUVAR __fish_initialized:4300
 SETUVAR _fisher_jorgebucaran_2F_fisher_files:\x7e/\x2econfig/fish/functions/fisher\x2efish\x1e\x7e/\x2econfig/fish/completions/fisher\x2efish
 SETUVAR _fisher_jorgebucaran_2F_hydro_files:\x7e/\x2econfig/fish/functions/fish_mode_prompt\x2efish\x1e\x7e/\x2econfig/fish/functions/fish_prompt\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/hydro\x2efish
-SETUVAR _fisher_patrickf1_2F_fzf_2E_fish_files:\x7e/\x2econfig/fish/functions/_fzf_configure_bindings_help\x2efish\x1e\x7e/\x2econfig/fish/functions/_fzf_extract_var_info\x2efish\x1e\x7e/\x2econfig/fish/functions/_fzf_preview_changed_file\x2efish\x1e\x7e/\x2econfig/fish/functions/_fzf_preview_file\x2efish\x1e\x7e/\x2econfig/fish/functions/_fzf_report_diff_type\x2efish\x1e\x7e/\x2econfig/fish/functions/_fzf_report_file_type\x2efish\x1e\x7e/\x2econfig/fish/functions/_fzf_search_directory\x2efish\x1e\x7e/\x2econfig/fish/functions/_fzf_search_git_log\x2efish\x1e\x7e/\x2econfig/fish/functions/_fzf_search_git_status\x2efish\x1e\x7e/\x2econfig/fish/functions/_fzf_search_history\x2efish\x1e\x7e/\x2econfig/fish/functions/_fzf_search_processes\x2efish\x1e\x7e/\x2econfig/fish/functions/_fzf_search_variables\x2efish\x1e\x7e/\x2econfig/fish/functions/_fzf_wrapper\x2efish\x1e\x7e/\x2econfig/fish/functions/fzf_configure_bindings\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/fzf\x2efish\x1e\x7e/\x2econfig/fish/completions/fzf_configure_bindings\x2efish
-SETUVAR _fisher_plugins:jorgebucaran/fisher\x1ejorgebucaran/hydro\x1epatrickf1/fzf\x2efish
+SETUVAR _fisher_plugins:jorgebucaran/fisher\x1ejorgebucaran/hydro
 SETUVAR _fisher_upgraded_to_4_4:\x1d
-SETUVAR _hydro_git_14955:master\u2022\x20\u21911\x20
-SETUVAR _hydro_git_1529:master\u2022\x20
-SETUVAR _hydro_git_2381:master\u2022\x20
-SETUVAR _hydro_git_37225:master\x20
-SETUVAR _hydro_git_37787:master\u2022\x20
-SETUVAR _hydro_git_404:master\x20
-SETUVAR _hydro_git_468:master\u2022\x20
-SETUVAR _hydro_git_924:\x1d
-SETUVAR fish_user_paths:/mnt/c/Windows/System32/WindowsPowerShell/v1\x2e0\x1e/mnt/c/Windows/System32\x1e/home/jsmith/\x2elocal/bin\x1e/home/jsmith/\x2eopencode/bin\x1e/mnt/c/Windows/System32/OpenSSH
+SETUVAR _hydro_git_11006:main\u2022\x20\u21914\x20
+SETUVAR _hydro_git_14555:main\x20\u21911\x20
+SETUVAR _hydro_git_14633:master\x20
+SETUVAR _hydro_git_25957:main\x20
+SETUVAR _hydro_git_2953:macos\u2022\x20
+SETUVAR _hydro_git_32676:main\u2022\x20\u21911\x20
+SETUVAR _hydro_git_37873:macos\u2022\x20
+SETUVAR _hydro_git_41056:main\x20
+SETUVAR _hydro_git_4569:master\u2022\x20
+SETUVAR _hydro_git_52347:main\x20\u21911\x20
+SETUVAR _hydro_git_61261:master\x20
+SETUVAR _hydro_git_63734:main\x20
+SETUVAR _hydro_git_71473:main\u2022\x20\u21912\x20
+SETUVAR _hydro_git_79493:main\u2022\x20
+SETUVAR _hydro_git_79539:main\x20
+SETUVAR _hydro_git_79612:main\u2022\x20
+SETUVAR _hydro_git_80589:main\x20
+SETUVAR _hydro_git_83247:main\u2022\x20\u21911\x20
+SETUVAR _hydro_git_91955:main\u2022\x20\u21914\x20
+SETUVAR fish_user_paths:/Users/jsmith/\x2elocal/bin\x1e/opt/homebrew/opt/libpq/bin\x1e/Applications/Sublime\x20Text\x2eapp/Contents/SharedSupport/bin\x1e/Users/jsmith/\x2ebun/bin\x1e/Users/jsmith/go/bin\x1e/Users/jsmith/\x2elocal/scripts\x1e/Users/jsmith/\x2eopencode/bin

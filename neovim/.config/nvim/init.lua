@@ -765,6 +765,7 @@ do
     -- ts_ls = {},
 
     basedpyright = {},
+    clangd = {},
     gopls = {},
     jsonls = {},
     ols = {},
