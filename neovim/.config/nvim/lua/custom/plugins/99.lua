@@ -6,8 +6,10 @@ local basename = vim.fs.basename(cwd)
 
 _99.setup {
   -- provider = _99.Providers.ClaudeCodeProvider,  -- default: OpenCodeProvider
-  provider = _99.Providers.OpenCodeProvider,
-  model = 'firepass/accounts/fireworks/routers/kimi-k2p6-turbo',
+  -- provider = _99.Providers.OpenCodeProvider,
+  -- model = 'firepass/accounts/fireworks/routers/kimi-k2p6-turbo',
+  provider = _99.Providers.CursorAgentProvider,
+  model = 'composer-2.5-fast',
   logger = {
     level = _99.DEBUG,
     path = './.tmp/' .. basename .. '.99.debug',
