@@ -177,7 +177,7 @@ do
   vim.o.shiftwidth = 2 -- Use this number of spaces for indentation
   vim.o.tabstop = 2 -- Show tab as this number of spaces
 
-  -- vim.o.smartindent   = true    -- Make indenting smart
+  -- vim.o.smartindent = true -- Make indenting smart
   vim.o.spelloptions = 'camel' -- Treat camelCase word parts as separate words
 end
 
@@ -773,11 +773,14 @@ do
     -- But for many setups, the LSP (`ts_ls`) will work just fine
     -- ts_ls = {},
 
+    astro = {},
     basedpyright = {},
     gopls = {},
     jsonls = {},
     ols = {},
     stylua = {}, -- Used to format Lua code
+    tailwindcss = {},
+    vtsls = {},
 
     -- Special Lua Config, as recommended by neovim help docs
     lua_ls = {
@@ -876,6 +879,7 @@ do
       --
       -- You can use 'stop_after_first' to run the first available formatter from the list
       -- javascript = { "prettierd", "prettier", stop_after_first = true },
+      astro = { 'prettier' },
       go = {
         'gofumpt',
         'goimports',
@@ -1008,7 +1012,7 @@ do
     local has_indent_query = vim.treesitter.query.get(language, 'indents') ~= nil
 
     -- Enable treesitter based indentation
-    if has_indent_query then vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()" end
+    -- if has_indent_query then vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()" end
   end
 
   local available_parsers = require('nvim-treesitter').get_available()
