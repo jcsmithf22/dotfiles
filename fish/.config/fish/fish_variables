@@ -20,10 +20,11 @@ SETUVAR _hydro_git_52347:main\x20\u21911\x20
 SETUVAR _hydro_git_61261:master\x20
 SETUVAR _hydro_git_63734:main\x20
 SETUVAR _hydro_git_71473:main\u2022\x20\u21912\x20
+SETUVAR _hydro_git_77784:macos\u2022\x20\u21911\x20
 SETUVAR _hydro_git_79493:main\u2022\x20
 SETUVAR _hydro_git_79539:main\x20
 SETUVAR _hydro_git_79612:main\u2022\x20
 SETUVAR _hydro_git_80589:main\x20
 SETUVAR _hydro_git_83247:main\u2022\x20\u21911\x20
 SETUVAR _hydro_git_91955:main\u2022\x20\u21914\x20
-SETUVAR fish_user_paths:/Users/jsmith/\x2elocal/bin\x1e/opt/homebrew/opt/libpq/bin\x1e/Applications/Sublime\x20Text\x2eapp/Contents/SharedSupport/bin\x1e/Users/jsmith/\x2ebun/bin\x1e/Users/jsmith/go/bin\x1e/Users/jsmith/\x2elocal/scripts\x1e/Users/jsmith/\x2eopencode/bin
+SETUVAR fish_user_paths:/Users/jsmith/personal/c3\x1e/Users/jsmith/\x2elocal/bin\x1e/opt/homebrew/opt/libpq/bin\x1e/Applications/Sublime\x20Text\x2eapp/Contents/SharedSupport/bin\x1e/Users/jsmith/\x2ebun/bin\x1e/Users/jsmith/go/bin\x1e/Users/jsmith/\x2elocal/scripts\x1e/Users/jsmith/\x2eopencode/bin
