@@ -892,7 +892,7 @@ do
         'ruff_format',
         'ruff_organize_imports',
       },
-      zig = { 'zls' },
+      zig = { 'zigfmt' },
     },
   }
 
