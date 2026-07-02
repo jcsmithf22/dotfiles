@@ -724,6 +724,9 @@ do
       --  For example, in C this would take you to the header.
       map('grD', vim.lsp.buf.declaration, 'Declaration')
 
+      -- Since hover no longer is for manual, make keymap for it
+      vim.keymap.set('n', 'grm', '<cmd>:vertical Man<CR>', { desc = 'Manual' })
+
       -- The following two autocommands are used to highlight references of the
       -- word under your cursor when your cursor rests there for a little while.
       --    See `:help CursorHold` for information about when this is executed
@@ -781,6 +784,7 @@ do
 
     astro = {},
     basedpyright = {},
+    c3_lsp = {},
     clangd = {},
     gopls = {},
     jsonls = {},
