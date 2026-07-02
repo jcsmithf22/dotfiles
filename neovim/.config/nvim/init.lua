@@ -765,6 +765,9 @@ do
   -- Enable the following language servers
   --  Feel free to add/remove any LSPs that you want here. They will automatically be installed.
   --  See `:help lsp-config` for information about keys and how to configure
+  local capabilities = vim.lsp.protocol.make_client_capabilities()
+  capabilities.textDocument.completion.completionItem.snippetSupport = false
+
   ---@type table<string, vim.lsp.Config>
   local servers = {
     -- clangd = {},
@@ -788,6 +791,9 @@ do
     stylua = {}, -- Used to format Lua code
     tailwindcss = {},
     vtsls = {},
+    zls = {
+      -- capabilities = capabilities,
+    },
 
     -- Special Lua Config, as recommended by neovim help docs
     lua_ls = {
@@ -967,13 +973,10 @@ do
     },
 
     sources = {
-      default = function()
-        if vim.bo.filetype == 'zig' then
-          return { 'lsp', 'path', 'snippets', 'buffer' }
-        else
-          return { 'lsp', 'path', 'snippets' }
-        end
-      end,
+      default = { 'lsp', 'path', 'snippets' },
+      per_filetype = {
+        zig = { inherit_defaults = true, 'buffer' },
+      },
     },
 
     snippets = { preset = 'luasnip' },
