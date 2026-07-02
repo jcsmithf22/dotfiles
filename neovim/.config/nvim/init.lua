@@ -967,7 +967,13 @@ do
     },
 
     sources = {
-      default = { 'lsp', 'path', 'snippets' },
+      default = function()
+        if vim.bo.filetype == 'zig' then
+          return { 'lsp', 'path', 'snippets', 'buffer' }
+        else
+          return { 'lsp', 'path', 'snippets' }
+        end
+      end,
     },
 
     snippets = { preset = 'luasnip' },
