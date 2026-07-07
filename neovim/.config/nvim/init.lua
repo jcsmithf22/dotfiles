@@ -420,47 +420,47 @@ do
   -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
   -- vim.cmd.colorscheme 'tokyonight-night'
 
-  vim.pack.add { gh 'webhooked/kanso.nvim' }
-  vim.o.background = 'light'
-  vim.cmd 'color kanso'
+  -- vim.pack.add { gh 'webhooked/kanso.nvim' }
+  -- vim.o.background = 'light'
+  -- vim.cmd 'color kanso'
 
-  -- vim.pack.add { gh 'rebelot/kanagawa.nvim' }
-  --
-  -- require('kanagawa').setup {
-  --   -- colors = {
-  --   -- 	theme = {
-  --   -- 		all = {
-  --   -- 			ui = {
-  --   -- 				bg_gutter = "none",
-  --   -- 			},
-  --   -- 		},
-  --   -- 	},
-  --   -- },
-  --   overrides = function(colors)
-  --     local theme = colors.theme
-  --     local makeDiagnosticColor = function(color)
-  --       local c = require 'kanagawa.lib.color'
-  --       return { fg = color, bg = c(color):blend(theme.ui.bg, 0.95):to_hex() }
-  --     end
-  --
-  --     return {
-  --       Pmenu = { fg = theme.ui.shade0, bg = theme.ui.bg_p1 }, -- add `blend = vim.o.pumblend` to enable transparency
-  --       PmenuKind = { fg = theme.ui.shade0, bg = theme.ui.bg_p1 },
-  --       PmenuSel = { fg = 'NONE', bg = theme.ui.bg_p2 },
-  --       PmenuKindSel = { fg = 'NONE', bg = theme.ui.bg_p2 },
-  --       PmenuSbar = { bg = theme.ui.bg_m1 },
-  --       PmenuThumb = { bg = theme.ui.bg_p2 },
-  --
-  --       DiagnosticVirtualTextHint = makeDiagnosticColor(theme.diag.hint),
-  --       DiagnosticVirtualTextInfo = makeDiagnosticColor(theme.diag.info),
-  --       DiagnosticVirtualTextWarn = makeDiagnosticColor(theme.diag.warning),
-  --       DiagnosticVirtualTextError = makeDiagnosticColor(theme.diag.error),
-  --     }
-  --   end,
-  -- }
-  --
-  -- vim.o.background = 'dark'
-  -- vim.cmd 'color kanagawa'
+  vim.pack.add { gh 'rebelot/kanagawa.nvim' }
+
+  require('kanagawa').setup {
+    -- colors = {
+    -- 	theme = {
+    -- 		all = {
+    -- 			ui = {
+    -- 				bg_gutter = "none",
+    -- 			},
+    -- 		},
+    -- 	},
+    -- },
+    overrides = function(colors)
+      local theme = colors.theme
+      local makeDiagnosticColor = function(color)
+        local c = require 'kanagawa.lib.color'
+        return { fg = color, bg = c(color):blend(theme.ui.bg, 0.95):to_hex() }
+      end
+
+      return {
+        Pmenu = { fg = theme.ui.shade0, bg = theme.ui.bg_p1 }, -- add `blend = vim.o.pumblend` to enable transparency
+        PmenuKind = { fg = theme.ui.shade0, bg = theme.ui.bg_p1 },
+        PmenuSel = { fg = 'NONE', bg = theme.ui.bg_p2 },
+        PmenuKindSel = { fg = 'NONE', bg = theme.ui.bg_p2 },
+        PmenuSbar = { bg = theme.ui.bg_m1 },
+        PmenuThumb = { bg = theme.ui.bg_p2 },
+
+        DiagnosticVirtualTextHint = makeDiagnosticColor(theme.diag.hint),
+        DiagnosticVirtualTextInfo = makeDiagnosticColor(theme.diag.info),
+        DiagnosticVirtualTextWarn = makeDiagnosticColor(theme.diag.warning),
+        DiagnosticVirtualTextError = makeDiagnosticColor(theme.diag.error),
+      }
+    end,
+  }
+
+  vim.o.background = 'dark'
+  vim.cmd 'color kanagawa'
 
   -- Highlight todo, notes, etc in comments
   vim.pack.add { gh 'folke/todo-comments.nvim' }
@@ -788,11 +788,13 @@ do
     c3_lsp = {},
     clangd = {},
     gopls = {},
+    intelephense = {},
     jsonls = {},
     ols = {},
     stylua = {}, -- Used to format Lua code
     tailwindcss = {},
     vtsls = {},
+    zls = {},
 
     -- Special Lua Config, as recommended by neovim help docs
     lua_ls = {
