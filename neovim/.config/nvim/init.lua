@@ -386,7 +386,7 @@ do
     icons = { mappings = false },
     triggers = {
       { '<auto>', mode = 'nixsotc' },
-      { 's', mode = { 'n', 'v' } },
+      -- { 's', mode = { 'n', 'v' } },
     },
     -- Document existing key chains
     spec = {
@@ -398,6 +398,7 @@ do
       { '<leader>9', group = '99', mode = { 'n', 'v' } },
       { '<leader>9w', group = 'Work', mode = { 'n', 'v' } },
       { 'gr', group = 'LSP Actions', mode = { 'n', 'v' } },
+      { 'gs', group = 'Surround', mode = { 'n', 'v' } },
     },
   }
 
@@ -424,43 +425,12 @@ do
   -- vim.o.background = 'light'
   -- vim.cmd 'color kanso'
 
-  vim.pack.add { gh 'rebelot/kanagawa.nvim' }
+  -- vim.pack.add { gh 'rebelot/kanagawa.nvim' }
+  -- require('config.kanagawa').setup()
 
-  require('kanagawa').setup {
-    -- colors = {
-    -- 	theme = {
-    -- 		all = {
-    -- 			ui = {
-    -- 				bg_gutter = "none",
-    -- 			},
-    -- 		},
-    -- 	},
-    -- },
-    overrides = function(colors)
-      local theme = colors.theme
-      local makeDiagnosticColor = function(color)
-        local c = require 'kanagawa.lib.color'
-        return { fg = color, bg = c(color):blend(theme.ui.bg, 0.95):to_hex() }
-      end
+  vim.pack.add { gh 'neanias/everforest-nvim' }
+  require('config.everforest').setup()
 
-      return {
-        Pmenu = { fg = theme.ui.shade0, bg = theme.ui.bg_p1 }, -- add `blend = vim.o.pumblend` to enable transparency
-        PmenuKind = { fg = theme.ui.shade0, bg = theme.ui.bg_p1 },
-        PmenuSel = { fg = 'NONE', bg = theme.ui.bg_p2 },
-        PmenuKindSel = { fg = 'NONE', bg = theme.ui.bg_p2 },
-        PmenuSbar = { bg = theme.ui.bg_m1 },
-        PmenuThumb = { bg = theme.ui.bg_p2 },
-
-        DiagnosticVirtualTextHint = makeDiagnosticColor(theme.diag.hint),
-        DiagnosticVirtualTextInfo = makeDiagnosticColor(theme.diag.info),
-        DiagnosticVirtualTextWarn = makeDiagnosticColor(theme.diag.warning),
-        DiagnosticVirtualTextError = makeDiagnosticColor(theme.diag.error),
-      }
-    end,
-  }
-
-  vim.o.background = 'dark'
-  vim.cmd 'color kanagawa'
 
   -- Highlight todo, notes, etc in comments
   vim.pack.add { gh 'folke/todo-comments.nvim' }
@@ -809,9 +779,6 @@ do
     stylua = {}, -- Used to format Lua code
     tailwindcss = {},
     vtsls = {},
-    zls = {
-      -- capabilities = capabilities,
-    },
 
     -- Special Lua Config, as recommended by neovim help docs
     lua_ls = {
@@ -882,6 +849,13 @@ do
     vim.lsp.config(name, server)
     vim.lsp.enable(name)
   end
+
+  ---@type vim.lsp.Config
+  local zls = {
+    -- capabilities = capabilities
+  }
+  vim.lsp.config('zls', zls)
+  vim.lsp.enable 'zls'
 end
 
 -- ============================================================
@@ -1057,7 +1031,7 @@ do
     local has_indent_query = vim.treesitter.query.get(language, 'indents') ~= nil
 
     -- Enable treesitter based indentation
-    -- if has_indent_query then vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()" end
+    if has_indent_query then vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()" end
   end
 
   local available_parsers = require('nvim-treesitter').get_available()
