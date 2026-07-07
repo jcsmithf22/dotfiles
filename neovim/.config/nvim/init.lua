@@ -492,7 +492,8 @@ do
     n_lines = 500,
   }
 
-  require('mini.misc').setup {}
+  require('mini.misc').setup()
+  require('mini.input').setup()
 
   -- Restore latest cursor position on file open
   MiniMisc.setup_restore_cursor()
