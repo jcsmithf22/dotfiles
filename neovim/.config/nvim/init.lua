@@ -832,6 +832,12 @@ do
     -- You can add other tools here that you want Mason to install
   })
 
+  local locally_installed = {
+    'ols',
+  }
+
+  ensure_installed = vim.tbl_filter(function(name) return not vim.tbl_contains(locally_installed, name) end, ensure_installed)
+
   require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
   for name, server in pairs(servers) do
