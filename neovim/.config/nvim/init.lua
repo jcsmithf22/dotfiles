@@ -502,6 +502,8 @@ do
   -- possibly different color padding around Neovim instance
   MiniMisc.setup_termbg_sync()
 
+  MiniMisc.setup_auto_root()
+
   -- Add/delete/replace surroundings (brackets, quotes, etc.)
   --
   -- - saiw) - [S]urround [A]dd [I]nner [W]ord [)]Paren
