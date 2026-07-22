@@ -471,7 +471,7 @@ do
   -- possibly different color padding around Neovim instance
   MiniMisc.setup_termbg_sync()
 
-  MiniMisc.setup_auto_root()
+  MiniMisc.setup_auto_root { '.git', 'Makefile', 'nvim-pack-lock.json' }
 
   -- Add/delete/replace surroundings (brackets, quotes, etc.)
   --
