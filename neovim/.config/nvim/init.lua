@@ -771,6 +771,8 @@ do
     basedpyright = {},
     c3_lsp = {},
     clangd = {},
+    cssls = {},
+    css_variables = {},
     gopls = {},
     intelephense = {},
     jsonls = {},
@@ -778,6 +780,7 @@ do
     stylua = {}, -- Used to format Lua code
     tailwindcss = {},
     vtsls = {},
+    -- tsgo = {},
 
     -- Special Lua Config, as recommended by neovim help docs
     lua_ls = {
@@ -890,12 +893,15 @@ do
       --
       -- You can use 'stop_after_first' to run the first available formatter from the list
       -- javascript = { "prettierd", "prettier", stop_after_first = true },
-      astro = { 'prettier' },
-      css = { 'prettier' },
+      astro = { 'prettierd', 'prettier', stop_after_first = true },
+      css = { 'prettierd', 'prettier', stop_after_first = true },
       go = {
         'gofumpt',
         'goimports',
       },
+      javascript = { 'prettierd', 'prettier', stop_after_first = true },
+      json = { 'prettierd', 'prettier', stop_after_first = true },
+      typescript = { 'prettierd', 'prettier', stop_after_first = true },
       python = {
         'ruff_fix',
         'ruff_format',
@@ -1026,12 +1032,15 @@ do
     -- vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
     -- vim.wo.foldmethod = 'expr'
 
+    -- Languages that should not use treesitter indentation (keep Vim's built-in indentexpr)
+    local indent_opt_out = { astro = true }
+
     -- Check if treesitter indentation is available for this language, and if so enable it
     -- in case there is no indent query, the indentexpr will fallback to the vim's built in one
     local has_indent_query = vim.treesitter.query.get(language, 'indents') ~= nil
 
     -- Enable treesitter based indentation
-    if has_indent_query then vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()" end
+    if has_indent_query and not indent_opt_out[language] then vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()" end
   end
 
   local available_parsers = require('nvim-treesitter').get_available()
