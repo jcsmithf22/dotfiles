@@ -2,6 +2,16 @@ return {
   { import = "nvchad.blink.lazyspec" },
 
   {
+    "saghen/blink.cmp",
+    opts = {
+      signature = {
+        enabled = true,
+        window = { show_documentation = false },
+      },
+    },
+  },
+
+  {
     "stevearc/conform.nvim",
     -- event = 'BufWritePre', -- uncomment for format on save
     opts = require "configs.conform",
