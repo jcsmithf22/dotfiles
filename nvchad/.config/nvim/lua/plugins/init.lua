@@ -29,6 +29,22 @@ return {
     lazy = false,
   },
 
+  {
+    "nvim-telescope/telescope.nvim",
+    dependencies = { "nvim-telescope/telescope-ui-select.nvim" },
+    lazy = false,
+    opts = function(_, opts)
+      opts.extensions = opts.extensions or {}
+      opts.extensions["ui-select"] = require("telescope.themes").get_dropdown {
+        layout_strategy = "horizontal",
+      }
+    end,
+    config = function(_, opts)
+      require("telescope").setup(opts)
+      require("telescope").load_extension "ui-select"
+    end,
+  },
+
   { "nvim-mini/mini.misc", version = false, opts = {}, lazy = false },
 
   -- These are some examples, uncomment them if you want to see them work!
