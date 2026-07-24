@@ -934,7 +934,6 @@ do
   require('luasnip.loaders.from_vscode').lazy_load()
 
   -- [[ Autocomplete Engine ]]
-  --{ src = gh 'saghen/blink.cmp', version = vim.version.range '1.*' }
   vim.pack.add { gh 'saghen/blink.lib', gh 'saghen/blink.cmp' }
   local cmp = require 'blink.cmp'
   cmp.build():pwait()
@@ -988,12 +987,7 @@ do
 
     snippets = { preset = 'luasnip' },
 
-    -- Blink.cmp includes an optional, recommended rust fuzzy matcher,
-    -- which automatically downloads a prebuilt binary when enabled.
-    --
-    -- By default, we use the Lua implementation instead, but you may enable
-    -- the rust implementation via `'prefer_rust_with_warning'`
-    --
+    -- Use the Blink 2 Rust fuzzy matcher built above.
     -- See `:help blink-cmp-config-fuzzy` for more information
     fuzzy = { implementation = 'rust' },
 

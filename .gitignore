@@ -1,0 +1,9 @@
+/fish/.config/fish/fish_variables
+/fish/.config/fish/conf.d/fish_frozen_key_bindings.fish
+/fish/.config/fish/completions/docker.fish
+/fish/.config/fish/completions/kubectl.fish
+/fish/.config/fish/completions/orbctl.fish
+/fish/.config/fish/completions/fzf_configure_bindings.fish
+/fish/.config/fish/conf.d/fzf.fish
+/fish/.config/fish/functions/_fzf_*.fish
+/fish/.config/fish/functions/fzf_configure_bindings.fish
